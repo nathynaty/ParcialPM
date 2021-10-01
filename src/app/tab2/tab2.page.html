@@ -1,17 +1,40 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-app>
+  <ion-header  clas="fondo-header" [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title class="ion-text-center color-azul">Suma y resta entre Binarios</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
-</ion-content>
+  <ion-content class="ion-padding">
+
+    <ion-item>
+      <ion-text class="color-azul ion-text-center">Recuerda que solo se permiten numeros binarios</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="color-azul" position="floating">Expresion Binaria</ion-label>
+      <ion-input [(ngModel)]="binario1" placeholder="Ingrese el Número" [value]="binario1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="color-azul" position="floating">Expresion Binaria</ion-label>
+      <ion-input [(ngModel)]="binario2" placeholder="Ingrese el Número" [value]="binario2"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-button (click)="operacion()" size="small">Operar</ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="color-rojo ion-text-center">Resultados</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="color-azul">Suma: {{sumabinarios}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="color-azul">Resta: {{restabinarios}}</ion-label>
+    </ion-item>
+  </ion-content>
+</ion-app>

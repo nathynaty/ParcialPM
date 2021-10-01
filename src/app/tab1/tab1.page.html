@@ -1,17 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-app>
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title class="ion-text-center color-azul">Sistemas de numeración</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <ion-content class="ion-padding">
+    <ion-item>
+      <ion-label class="color-azul"  position="floating">Entero</ion-label>
+      <ion-input [(ngModel)]="entero" placeholder="Ingrese el Número" [value]="entero" (ngModelChange)="updateValue('entero')"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="color-azul" position="floating">Decimal</ion-label>
+      <ion-input [(ngModel)]="decimal" placeholder="Ingrese el Número" [value]="decimal" (ngModelChange)="updateValue('decimal')"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="color-azul" position="floating">Binario</ion-label>
+      <ion-input [(ngModel)]="binario" placeholder="Ingrese el Número" [value]="binario" (ngModelChange)="updateValue('binario')"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="color-azul" position="floating">Octal</ion-label>
+      <ion-input [(ngModel)]="octal" placeholder="Ingrese el Número" [value]="octal" (ngModelChange)="updateValue('octal')"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="color-azul" position="floating">Hexadecimal</ion-label>
+      <ion-input [(ngModel)]="hexadecimal" placeholder="Ingrese el Número" [value]="hexadecimal" (ngModelChange)="updateValue('hexadecimal')"></ion-input>
+    </ion-item>
+
+  </ion-content>
+</ion-app>

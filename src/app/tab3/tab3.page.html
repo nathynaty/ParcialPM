@@ -1,17 +1,31 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-app>
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title class="ion-text-center color-azul">Operaciones Logicas</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
-</ion-content>
+  <ion-content class="ion-padding">
+    <ion-item>
+      <ion-label class="color-azul" position="floating">BinarioA</ion-label>
+      <ion-input [(ngModel)]="binarioa" placeholder="Ingrese el Número" [value]="binarioa"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="color-azul" position="floating">BinarioB</ion-label>
+      <ion-input [(ngModel)]="binariob" placeholder="Ingrese el Número" [value]="binariob"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select [(ngModel)]="opcionseleccionada" value="brown" okText="Ok" cancelText="Cancelar">
+        <ion-select-option value="and">AND</ion-select-option>
+        <ion-select-option value="or">OR</ion-select-option>
+        <ion-select-option value="xor">XOR</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-button (click)="operacion()" size="small">Operar</ion-button>
+    </ion-item>
+  </ion-content>
+</ion-app>

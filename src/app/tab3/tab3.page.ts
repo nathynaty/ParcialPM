@@ -6,7 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  opcionseleccionada;
+  and;
+  or;
+  xor;
 
   constructor() {}
+
+  operacion(){
+    if (this.opcionseleccionada === this.and){
+
+    }
+
+  }
 
 }
